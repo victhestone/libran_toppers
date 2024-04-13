@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/libran_toppers/static/css/main.361fc761.css",
-    "main.js": "/libran_toppers/static/js/main.9d367e6c.js",
+    "main.js": "/libran_toppers/static/js/main.4dd30077.js",
     "static/js/453.d73d2bba.chunk.js": "/libran_toppers/static/js/453.d73d2bba.chunk.js",
     "static/media/cover.jpg": "/libran_toppers/static/media/cover.d0c5af73e7d2b7385916.jpg",
     "static/media/bart.png": "/libran_toppers/static/media/bart.75737984ce19fc949e3e.png",
@@ -17,11 +17,11 @@
     "static/media/cookpot.jpeg": "/libran_toppers/static/media/cookpot.94f963ae5c1eee036ecb.jpeg",
     "index.html": "/libran_toppers/index.html",
     "main.361fc761.css.map": "/libran_toppers/static/css/main.361fc761.css.map",
-    "main.9d367e6c.js.map": "/libran_toppers/static/js/main.9d367e6c.js.map",
+    "main.4dd30077.js.map": "/libran_toppers/static/js/main.4dd30077.js.map",
     "453.d73d2bba.chunk.js.map": "/libran_toppers/static/js/453.d73d2bba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.361fc761.css",
-    "static/js/main.9d367e6c.js"
+    "static/js/main.4dd30077.js"
   ]
 }
