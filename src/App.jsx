@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
+import { Routes, Route, HashRouter, Navigate } from 'react-router-dom';
 import PackOverview from './packs/pack-overview';
 import CardOverview from './cards/card-overview';
 
@@ -8,7 +8,7 @@ import Navigation from './navigation/navigation';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Navigation/>}>
           <Route index path="*" element={<Navigate to="/packs"/>} />
@@ -16,7 +16,7 @@ function App() {
           <Route path="cards" element={<CardOverview />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

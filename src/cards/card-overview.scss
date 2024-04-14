@@ -1,16 +1,46 @@
 .card-overview {
-    margin: 16px;
     width: 100%;
     height: 100%;
 
     &-container {
         display: flex;
+        justify-content: center;
         gap: 14px;
         flex-wrap: wrap;
         width: 100%;
-        height: calc(100% - 16px);
+        height: calc(100% - 72px);
         overflow: auto;
-        padding: 8px;
+        padding: 16px 8px;
         box-sizing: border-box;
+    }
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 8px;
+        gap: 8px;
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        
+        &-search {
+            div {
+                width: 100%;
+            }
+            
+            @media only screen and (max-width: 40em) {
+                width: 100%;
+            }
+        }
+
+        &-dropdowns {
+            display: flex;
+            width: 30%;
+            gap: 8px;
+
+            @media only screen and (max-width: 40em) {
+                width: 100%;
+            }
+        }
     }
 }
