@@ -1,4 +1,3 @@
-import { ALL_CARDS } from "../constants/cards";
 import { TYPES } from "../constants/types";
 
 const chances = {
@@ -7,21 +6,28 @@ const chances = {
     silver: 89
 }
 
-const platinumCards = ALL_CARDS.filter(card => card.type === TYPES.Platinum);
-const goldCards = ALL_CARDS.filter(card => card.type === TYPES.Gold);
-const silverCards = ALL_CARDS.filter(card => card.type === TYPES.Silver);
+const getCardType = (filterType) => {
+    const allCards = localStorage.getItem('libraToppersAllCards');
+    if (allCards) {
+        const cards = JSON.parse(allCards);
+        return cards.filter(card => card.type === filterType);
+    }
+}; 
 
 const getPlatinumCard = () => {
+    const platinumCards = getCardType(TYPES.Platinum);
     const randomNumber = Math.random() * platinumCards.length;
     return platinumCards[Math.floor(randomNumber)];
 }
 
 const getGoldCard = () => {
+    const goldCards = getCardType(TYPES.Gold);
     const randomNumber = Math.random() * goldCards.length;
     return goldCards[Math.floor(randomNumber)];
 }
 
 const getSilverCard = () => {
+    const silverCards = getCardType(TYPES.Silver);
     const randomNumber = Math.random() * silverCards.length;
     return silverCards[Math.floor(randomNumber)];
 }

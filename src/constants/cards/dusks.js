@@ -11,7 +11,7 @@ import navari from '../../assets/gold/navari.png';
 import tilly from '../../assets/gold/tilly.png';
 import griff from '../../assets/gold/griff.png';
 
-import cookpot from '../../assets/silver/cookpot.jpeg';
+import cookpot from '../../assets/silver/cookpot.png';
 
 const PROCLUS = { 
     id: 'proclus',

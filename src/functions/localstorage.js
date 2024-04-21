@@ -1,11 +1,10 @@
-import { ALL_CARDS } from "../constants/cards";
 import { VERSION } from "../constants/version";
 
 export const getData = () => {
     let data = localStorage.getItem('libraToppersData');
     if (!data) { return initializeData(); }
     const parsedData = JSON.parse(data);
-    return setCardsToMostRecent(parsedData.cards);
+    return setCardsToMostRecent(parsedData?.cards || []);
 }
 
 export const initializeData = () => {
@@ -41,12 +40,18 @@ export const updateCards = (newCards) => {
     setData(updatedData);
 }
 
+const getAllCards = () => {
+    const allCards = localStorage.getItem('libraToppersAllCards');
+    if (allCards) {
+        return JSON.parse(allCards);
+    }
+}
+
 export const setCardsToMostRecent = (setCards) => {
     let hasOldCards;
     setCards.forEach((setCard, index) => {
-        const recentCard = ALL_CARDS.find(card => card.id === setCard.id);
+        const recentCard = getAllCards()?.find(card => card.id === setCard.id);
         if (recentCard.version !== setCard.version) {
-            console.log('setCard', setCard);
             recentCard.amount = setCard.amount;
             setCards[index] = recentCard;
             hasOldCards = true;

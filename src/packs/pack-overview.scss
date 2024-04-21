@@ -27,6 +27,35 @@
 
     }
 
+    &-counter {
+        position: absolute;
+        margin: 8px;
+        top: 0;
+        right: 0;
+
+        .booster-packs {
+            background-color: rgba(lightyellow, 0.8);
+            border: 3px solid gold;
+            border-radius: 16px;
+            width: 160px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        
+            img {
+                width: 32px;
+                height: 32px;
+            }
+            
+            span {
+                width: 100%;
+            }
+        }
+
+    }
+
     &-buttons {
         display: flex;
         justify-content: space-evenly;

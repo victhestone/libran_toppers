@@ -3,6 +3,7 @@ import { Button } from '@mui/material';
 import './pack-overview.scss';
 
 import cover from '../assets/cover.jpg';
+import boosterBox from '../assets/booster-box.png';
 import { openLucarianPack } from './open-pack';
 import { GOTHURIAL, LUCARIAN, NEUTRAL } from '../constants/alignment';
 import GenericCard from '../generic/generic-card';
@@ -24,9 +25,21 @@ function PackOverview() {
     updateCards(cards)
   }
 
+  const getBoosterPacks = () => {
+    const user = localStorage.getItem('libraToppersUser');
+    const parsedUser = JSON.parse(user);
+    return parsedUser?.boosterPacks || 0;
+  }
+
   return (
     <>
       {!receivedCards.length && <div className='pack'>
+        <div className='pack-counter'>
+          <div className='booster-packs'>
+            <img src={boosterBox} alt="Booster box"></img>
+            <span>{ getBoosterPacks() }</span>
+          </div>
+        </div>
         <div className='pack-img'>
           <img src={cover} alt="Packs cover"/>
         </div>

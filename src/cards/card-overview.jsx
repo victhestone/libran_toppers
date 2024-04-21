@@ -1,16 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import GenericCard from '../generic/generic-card';
 
 import './card-overview.scss';
-import { getData } from '../functions/localstorage';
 import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { ALIGNMENTS, ALL } from '../constants/alignment';
 import { TYPES } from '../constants/types';
 import { FACTIONS } from '../constants/factions';
 
-function CardOverview() {
-  const data = getData();
-  const [cards, setCards] = useState(data.cards);
+function CardOverview({ isAllCardsOverview }) {
+  const allCards = useMemo(() => {
+    if (isAllCardsOverview) {
+      const allCards = localStorage.getItem('libraToppersAllCards');
+      if (allCards) {
+        const data = JSON.parse(allCards);
+        return data || []
+      } else {
+        return [];
+      }
+    } else {
+      const userCards = localStorage.getItem('libraToppersData');
+      if (userCards) {
+        const data = JSON.parse(userCards);
+        return data?.cards || [];
+      } else {
+        return [];
+      }
+    }
+  }, []);
+  const [cards, setCards] = useState(allCards);
   const [alignment, setAlignment] = useState(ALL)
   const [rarity, setRarity] = useState(TYPES.All);
   const [search, setSearch] = useState('');
@@ -33,26 +50,28 @@ function CardOverview() {
   };
 
   useEffect(() => {
-    let allCards = data.cards;
+    if (!allCards) return;
+
+    let filteredCards = allCards;
 
     if (search) {
-      allCards = allCards.filter(card => card.name.toLowerCase().includes(search));
+      filteredCards = filteredCards.filter(card => card.name.toLowerCase().includes(search));
     }
 
     if (alignment !== ALL) {
-      allCards = allCards.filter(card => card.alignment === alignment);
+      filteredCards = filteredCards.filter(card => card.alignment === alignment);
     }
 
     if (rarity !== TYPES.All) {
-      allCards = allCards.filter(card => card.type === rarity);
+      filteredCards = filteredCards.filter(card => card.type === rarity);
     }
 
     if (faction !== FACTIONS.All) {
-      allCards = allCards.filter(card => card.faction === faction);
+      filteredCards = filteredCards.filter(card => card.faction === faction);
     }
 
-    setCards(allCards);
-  }, [search, alignment, rarity, faction])
+    setCards(filteredCards);
+  }, [allCards, search, alignment, rarity, faction])
 
 
   return (
@@ -98,7 +117,7 @@ function CardOverview() {
         </div>
       </div>
       <div className='card-overview-container'>
-        {!cards.length && <span>Open some packs to unlock cards!</span>}
+        {!cards?.length && <span>Open some packs to unlock cards!</span>}
         {cards.map(card => <GenericCard card={card}/>) }
       </div>
     </div>
