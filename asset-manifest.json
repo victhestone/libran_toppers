@@ -1,7 +1,18 @@
 {
   "files": {
-    "main.css": "/libran_toppers/static/css/main.361fc761.css",
-    "main.js": "/libran_toppers/static/js/main.4dd30077.js",
+    "main.css": "/libran_toppers/static/css/main.d5bf3f52.css",
+    "main.js": "/libran_toppers/static/js/main.101f9346.js",
+    "static/js/146.ef12d872.chunk.js": "/libran_toppers/static/js/146.ef12d872.chunk.js",
+    "static/js/55.d0c95096.chunk.js": "/libran_toppers/static/js/55.d0c95096.chunk.js",
+    "static/js/821.419381ab.chunk.js": "/libran_toppers/static/js/821.419381ab.chunk.js",
+    "static/js/339.7d2897a3.chunk.js": "/libran_toppers/static/js/339.7d2897a3.chunk.js",
+    "static/js/520.78e46454.chunk.js": "/libran_toppers/static/js/520.78e46454.chunk.js",
+    "static/js/691.cf7fd2c3.chunk.js": "/libran_toppers/static/js/691.cf7fd2c3.chunk.js",
+    "static/js/805.44fe38b1.chunk.js": "/libran_toppers/static/js/805.44fe38b1.chunk.js",
+    "static/js/502.9affb4bb.chunk.js": "/libran_toppers/static/js/502.9affb4bb.chunk.js",
+    "static/js/303.ecc4f778.chunk.js": "/libran_toppers/static/js/303.ecc4f778.chunk.js",
+    "static/js/311.9fa787ce.chunk.js": "/libran_toppers/static/js/311.9fa787ce.chunk.js",
+    "static/js/208.086871fd.chunk.js": "/libran_toppers/static/js/208.086871fd.chunk.js",
     "static/js/453.d73d2bba.chunk.js": "/libran_toppers/static/js/453.d73d2bba.chunk.js",
     "static/media/cover.jpg": "/libran_toppers/static/media/cover.d0c5af73e7d2b7385916.jpg",
     "static/media/bart.png": "/libran_toppers/static/media/bart.75737984ce19fc949e3e.png",
@@ -14,14 +25,15 @@
     "static/media/soldier-of-sanctus.png": "/libran_toppers/static/media/soldier-of-sanctus.1516131fde61d8e51847.png",
     "static/media/griff.png": "/libran_toppers/static/media/griff.a2aca9fe1b058b31f20f.png",
     "static/media/priest-of-sanctus.png": "/libran_toppers/static/media/priest-of-sanctus.719a3457dc321a4aa95f.png",
-    "static/media/cookpot.jpeg": "/libran_toppers/static/media/cookpot.94f963ae5c1eee036ecb.jpeg",
+    "static/media/cookpot.png": "/libran_toppers/static/media/cookpot.94f963ae5c1eee036ecb.png",
+    "static/media/booster-box.png": "/libran_toppers/static/media/booster-box.896a239cedd6e7084ccc.png",
     "index.html": "/libran_toppers/index.html",
-    "main.361fc761.css.map": "/libran_toppers/static/css/main.361fc761.css.map",
-    "main.4dd30077.js.map": "/libran_toppers/static/js/main.4dd30077.js.map",
+    "main.d5bf3f52.css.map": "/libran_toppers/static/css/main.d5bf3f52.css.map",
+    "main.101f9346.js.map": "/libran_toppers/static/js/main.101f9346.js.map",
     "453.d73d2bba.chunk.js.map": "/libran_toppers/static/js/453.d73d2bba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.361fc761.css",
-    "static/js/main.4dd30077.js"
+    "static/css/main.d5bf3f52.css",
+    "static/js/main.101f9346.js"
   ]
 }

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[821],{6821:(e,p,s)=>{e.exports=s.p+"static/media/felix.a9fb96cba690063e1117.png"}}]);
