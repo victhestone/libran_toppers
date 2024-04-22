@@ -36,6 +36,12 @@
         box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
         background-color: seashell !important;
     }
+
+    .MuiFab-circular {
+        z-index: 1;
+        left: 80%;
+        bottom: 10%;
+    }
 }
 
 .mobile {

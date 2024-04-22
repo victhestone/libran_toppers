@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BottomNavigation, BottomNavigationAction, Button, CircularProgress } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Button, CircularProgress, Fab } from '@mui/material';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import StyleIcon from '@mui/icons-material/Style';
 import RedeemIcon from '@mui/icons-material/Redeem';
@@ -92,10 +92,20 @@ function Navigation() {
             >
             <BottomNavigationAction label="Packs" icon={<RedeemIcon />} />
             <BottomNavigationAction label="Cards" icon={<StyleIcon />} />
-            <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
+            { user?.user?.isAdmin && <BottomNavigationAction label="Settings" icon={<SettingsIcon />} /> }
         </BottomNavigation>}
         <div className='navigation-container'>
             <Outlet></Outlet>
+            {
+                isMobile && 
+                <Fab color="primary" aria-label="add">
+                    {!loading && <>
+                        <SaveIcon fontSize='large'/>
+                    </>}
+                    {loading && <CircularProgress /> }
+                </Fab>
+            }
+
         </div>
     </div>
   );
