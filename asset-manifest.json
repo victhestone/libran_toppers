@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/libran_toppers/static/css/main.d5bf3f52.css",
-    "main.js": "/libran_toppers/static/js/main.101f9346.js",
+    "main.css": "/libran_toppers/static/css/main.72c92ec8.css",
+    "main.js": "/libran_toppers/static/js/main.a6c27d13.js",
     "static/js/146.ef12d872.chunk.js": "/libran_toppers/static/js/146.ef12d872.chunk.js",
     "static/js/55.d0c95096.chunk.js": "/libran_toppers/static/js/55.d0c95096.chunk.js",
     "static/js/821.419381ab.chunk.js": "/libran_toppers/static/js/821.419381ab.chunk.js",
@@ -28,12 +28,12 @@
     "static/media/cookpot.png": "/libran_toppers/static/media/cookpot.94f963ae5c1eee036ecb.png",
     "static/media/booster-box.png": "/libran_toppers/static/media/booster-box.896a239cedd6e7084ccc.png",
     "index.html": "/libran_toppers/index.html",
-    "main.d5bf3f52.css.map": "/libran_toppers/static/css/main.d5bf3f52.css.map",
-    "main.101f9346.js.map": "/libran_toppers/static/js/main.101f9346.js.map",
+    "main.72c92ec8.css.map": "/libran_toppers/static/css/main.72c92ec8.css.map",
+    "main.a6c27d13.js.map": "/libran_toppers/static/js/main.a6c27d13.js.map",
     "453.d73d2bba.chunk.js.map": "/libran_toppers/static/js/453.d73d2bba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5bf3f52.css",
-    "static/js/main.101f9346.js"
+    "static/css/main.72c92ec8.css",
+    "static/js/main.a6c27d13.js"
   ]
 }
