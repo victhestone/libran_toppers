@@ -12,7 +12,7 @@ export const verifyToken = async () => {
     const receivedUser = await response.json();
 
     if (receivedUser) {
-        localStorage.setItem('libraToppersData', JSON.stringify(receivedUser.user.cardCollection));
+        localStorage.setItem('libraToppersData', receivedUser.user.cardCollection);
         localStorage.setItem('libraToppersUser', JSON.stringify(receivedUser));
     }
 
