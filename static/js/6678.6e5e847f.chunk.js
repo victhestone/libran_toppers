@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[6678],{6678:(e,p,s)=>{e.exports=s.p+"static/media/invictus.33292515baff3dd60ae2.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[8491],{8491:(a,p,e)=>{a.exports=e.p+"static/media/lucarian_village_captain.c6dc05b8d0494d677116.png"}}]);

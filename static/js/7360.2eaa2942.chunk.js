@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[7360],{7360:(e,p,s)=>{e.exports=s.p+"static/media/felix_aurior.8b8c523d570f1c1b81a3.png"}}]);

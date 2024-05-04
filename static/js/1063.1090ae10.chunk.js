@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[1063],{1063:(e,p,s)=>{e.exports=s.p+"static/media/lina_cal.0ee3fbed7692fe5c6d16.png"}}]);

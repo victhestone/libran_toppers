@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[2264],{2264:(a,e,p)=>{a.exports=p.p+"static/media/little_bart.2aa8dba9621a492efd6f.png"}}]);

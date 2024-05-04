@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[5315],{5315:(e,p,s)=>{e.exports=s.p+"static/media/venelan.19d4122e6365fbfb2ab1.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[5308],{5308:(e,a,p)=>{e.exports=p.p+"static/media/lucarian_village_guard_archer.c401b07307dff5db7e63.png"}}]);

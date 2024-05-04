@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[5296],{5296:(e,a,p)=>{e.exports=p.p+"static/media/general_bartolomeo_lekayne.b6c585d6636f9f25ae7c.png"}}]);

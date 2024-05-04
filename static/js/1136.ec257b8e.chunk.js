@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[1136],{1136:(e,p,s)=>{e.exports=s.p+"static/media/angelic_footman.3fe95b3c77926799f353.png"}}]);

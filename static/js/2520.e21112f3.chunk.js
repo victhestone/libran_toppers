@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[2520],{2520:(e,p,a)=>{e.exports=a.p+"static/media/navari.413ac4f38c0e24bc66d0.png"}}]);

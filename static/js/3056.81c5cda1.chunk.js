@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[3056],{3056:(e,p,s)=>{e.exports=s.p+"static/media/crazy_villager.20c51394588f493b4265.png"}}]);

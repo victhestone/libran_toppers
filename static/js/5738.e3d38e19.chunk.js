@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[5738],{5738:(e,p,s)=>{e.exports=s.p+"static/media/crabbicus.a50872839efbc64abbe9.png"}}]);

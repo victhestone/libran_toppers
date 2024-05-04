@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[7145],{7145:(p,s,e)=>{p.exports=e.p+"static/media/proclus_lycius_paladin.9d72057020226807ae0b.png"}}]);

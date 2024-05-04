@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[6176],{6176:(a,e,p)=>{a.exports=p.p+"static/media/captain_silverbeard.6ca557d5298adabb62e3.png"}}]);

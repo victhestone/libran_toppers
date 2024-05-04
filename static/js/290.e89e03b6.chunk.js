@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[290],{290:(e,p,s)=>{e.exports=s.p+"static/media/sabbath.713d6d76e7dfafdc24d4.png"}}]);

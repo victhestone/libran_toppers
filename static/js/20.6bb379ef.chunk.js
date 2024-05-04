@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[20],{20:(a,e,p)=>{a.exports=p.p+"static/media/mina_savalan.7a9a848d44a19e929bae.png"}}]);

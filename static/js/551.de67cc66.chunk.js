@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[551],{551:(e,p,a)=>{e.exports=a.p+"static/media/bartolomeo_lekayne.6b89d2ac4c5d49e6edd4.png"}}]);

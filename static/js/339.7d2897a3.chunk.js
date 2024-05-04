@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[339],{2339:(e,p,a)=>{e.exports=a.p+"static/media/griff.a2aca9fe1b058b31f20f.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[4659],{4659:(e,a,p)=>{e.exports=p.p+"static/media/dandor_baroven.8833bb9d9709efa635a9.png"}}]);

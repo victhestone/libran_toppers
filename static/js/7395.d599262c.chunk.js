@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[7395],{7395:(e,s,p)=>{e.exports=p.p+"static/media/ten_sorkesh.754f7f86b50281c90fc4.png"}}]);

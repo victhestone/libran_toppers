@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[9525],{9525:(p,e,s)=>{p.exports=s.p+"static/media/proclus_book_lady.2054554c1d126a27e24c.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[7437],{7437:(e,p,s)=>{e.exports=s.p+"static/media/den\u2019elevan.faefd03cb1e00d42d64f.png"}}]);

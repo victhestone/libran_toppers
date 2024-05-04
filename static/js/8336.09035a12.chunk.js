@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[8336],{8336:(e,p,a)=>{e.exports=a.p+"static/media/varclaw.774de61142d01ca5f7bb.png"}}]);

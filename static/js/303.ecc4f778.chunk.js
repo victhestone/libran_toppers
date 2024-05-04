@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[303],{4303:(e,p,s)=>{e.exports=s.p+"static/media/cookpot.94f963ae5c1eee036ecb.png"}}]);

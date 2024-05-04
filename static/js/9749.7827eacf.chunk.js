@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[9749],{9749:(e,p,s)=>{e.exports=s.p+"static/media/little_borsh.2d31d4f8590302df845b.png"}}]);

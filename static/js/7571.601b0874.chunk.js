@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[7571],{7571:(e,a,p)=>{e.exports=p.p+"static/media/revanoven_sell\u2019kora.7fe577981be80b9da6ab.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[3771],{3771:(e,p,s)=>{e.exports=s.p+"static/media/carter.dcdeab5cf7d0146d1fd4.png"}}]);

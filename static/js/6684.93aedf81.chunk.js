@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[6684],{6684:(a,e,p)=>{a.exports=p.p+"static/media/sam_mallowwood.724a6a1ec2e0161f38ba.png"}}]);

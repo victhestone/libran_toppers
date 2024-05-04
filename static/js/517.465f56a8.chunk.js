@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[517],{517:(e,p,s)=>{e.exports=s.p+"static/media/kev_deregan.583ab2f5f4d47bd49542.png"}}]);

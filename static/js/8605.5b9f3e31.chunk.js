@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[8605],{8605:(e,a,p)=>{e.exports=p.p+"static/media/melan_korvan.aec15e0c734e64f8a3ea.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[2842],{2842:(e,p,a)=>{e.exports=a.p+"static/media/lucarian_villager.93f247fe92157053c8d5.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[9580],{9580:(e,a,p)=>{e.exports=p.p+"static/media/tibber_raftswing.31a6daceaa87934e0b95.png"}}]);

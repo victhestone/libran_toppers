@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[648],{648:(e,p,s)=>{e.exports=s.p+"static/media/telma_riverflow.523e8fc05855f69252e3.png"}}]);

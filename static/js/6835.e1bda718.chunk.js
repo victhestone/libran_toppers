@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[6835],{6835:(e,p,s)=>{e.exports=s.p+"static/media/steve.b670d47b4293e5d46ee5.png"}}]);

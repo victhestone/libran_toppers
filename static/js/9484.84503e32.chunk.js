@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklibran_toppers=self.webpackChunklibran_toppers||[]).push([[9484],{9484:(e,p,s)=>{e.exports=s.p+"static/media/darius_liman.6ad9ce20db4f224bf235.png"}}]);
