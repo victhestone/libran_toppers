@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/libran_toppers/static/css/main.ab39652a.css",
-    "main.js": "/libran_toppers/static/js/main.09026ed6.js",
+    "main.js": "/libran_toppers/static/js/main.b67c043a.js",
     "static/js/1105.bd96d862.chunk.js": "/libran_toppers/static/js/1105.bd96d862.chunk.js",
     "static/js/6599.28312606.chunk.js": "/libran_toppers/static/js/6599.28312606.chunk.js",
     "static/js/551.de67cc66.chunk.js": "/libran_toppers/static/js/551.de67cc66.chunk.js",
@@ -159,11 +159,11 @@
     "static/media/dirge_makhan.png": "/libran_toppers/static/media/dirge_makhan.d7515fc4bb9e5fb5d229.png",
     "index.html": "/libran_toppers/index.html",
     "main.ab39652a.css.map": "/libran_toppers/static/css/main.ab39652a.css.map",
-    "main.09026ed6.js.map": "/libran_toppers/static/js/main.09026ed6.js.map",
+    "main.b67c043a.js.map": "/libran_toppers/static/js/main.b67c043a.js.map",
     "6453.e6513fac.chunk.js.map": "/libran_toppers/static/js/6453.e6513fac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab39652a.css",
-    "static/js/main.09026ed6.js"
+    "static/js/main.b67c043a.js"
   ]
 }
