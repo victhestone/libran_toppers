@@ -4,56 +4,79 @@ import './pack-overview.scss';
 
 import cover from '../assets/cover.jpg';
 import boosterBox from '../assets/booster-box.png';
-import { openLucarianPack } from './open-pack';
+import { openPack } from './open-pack';
 import { GOTHURIAL, LUCARIAN, NEUTRAL } from '../constants/alignment';
 import GenericCard from '../generic/generic-card';
-import { updateCards } from '../functions/localstorage';
+import { updateCards, updateUser } from '../functions/localstorage';
 
 function PackOverview() {
   const [receivedCards, setReceivedCards] = React.useState([]);
+  const [boosterPacks, setBoosterPacks] = React.useState([]);
 
-  const openPack = (type) => {
+  const onOpenPack = (type) => {
     let cards;
     if(type === LUCARIAN) {
-      cards = openLucarianPack()
+      cards = openPack(LUCARIAN)
     } else if (type === GOTHURIAL) {
-      // setReceivedCards(openLucarianPack());
+      setReceivedCards(openPack(GOTHURIAL));
     } else if (type === NEUTRAL) {
-      // setReceivedCards(openNeutralPack());
+      setReceivedCards(openPack(NEUTRAL));
     }
     setReceivedCards(cards);
-    updateCards(cards)
+    updateCards(cards);
+    updateUser(type);
+    const boosterPackIndex = boosterPacks.findIndex(pack => pack.id === type);
+    const clonedBoosterPacks = [ ...boosterPacks ];
+    clonedBoosterPacks[boosterPackIndex].amount -= 1;
+    setBoosterPacks(clonedBoosterPacks);
   }
 
   const getBoosterPacks = () => {
     const user = localStorage.getItem('libraToppersUser');
     const parsedUser = JSON.parse(user);
-    return parsedUser?.boosterPacks || 0;
+    return parsedUser?.user.boosterPacks || 0;
+  }
+
+  React.useEffect(() => {
+    const boosterPacks = getBoosterPacks();
+    setBoosterPacks(boosterPacks);
+  }, []);
+
+  const getBoosterPacksAmount = (filter) => {
+    return boosterPacks.find(pack => pack.id === filter).amount;
   }
 
   return (
     <>
       {!receivedCards.length && <div className='pack'>
-        <div className='pack-counter'>
-          <div className='booster-packs'>
+        {boosterPacks.length && <div className='pack-counter'>
+          <div className='booster-packs lucarian'>
             <img src={boosterBox} alt="Booster box"></img>
-            <span>{ getBoosterPacks() }</span>
+            <span>{ getBoosterPacksAmount(LUCARIAN) }</span>
           </div>
-        </div>
+          <div className='booster-packs neutral'>
+            <img src={boosterBox} alt="Booster box"></img>
+            <span>{ getBoosterPacksAmount(NEUTRAL) }</span>
+          </div>
+          <div className='booster-packs gothurian'>
+            <img src={boosterBox} alt="Booster box"></img>
+            <span>{ getBoosterPacksAmount(GOTHURIAL) }</span>
+          </div>
+        </div>}
         <div className='pack-img'>
           <img src={cover} alt="Packs cover"/>
         </div>
-        <div className='pack-buttons'>
-          <Button onClick={() => openPack(LUCARIAN)} className='lucarian' size='large' variant='contained'>
+        {boosterPacks.length && <div className='pack-buttons'>
+          <Button disabled={getBoosterPacksAmount(LUCARIAN) < 1} onClick={() => onOpenPack(LUCARIAN)} className='lucarian' size='large' variant='contained'>
             Open Lucarian pack
           </Button>
-          <Button onClick={() => openPack(NEUTRAL)} disabled className='neutral' size='large' variant='contained'>
+          <Button disabled={getBoosterPacksAmount(NEUTRAL) < 1} onClick={() => onOpenPack(NEUTRAL)} className='neutral' size='large' variant='contained'>
             Open Neutral pack
           </Button>
-          <Button onClick={() => openPack(GOTHURIAL)} disabled className='gothurian' size='large' variant='contained'>
+          <Button disabled={getBoosterPacksAmount(GOTHURIAL) < 1} onClick={() => onOpenPack(GOTHURIAL)} className='gothurian' size='large' variant='contained'>
             Open Gothurian pack
           </Button>
-        </div>
+        </div>}
       </div>}
       {!!receivedCards.length && 
         <div className='cards'>

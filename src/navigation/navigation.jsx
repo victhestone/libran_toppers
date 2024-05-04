@@ -9,6 +9,9 @@ import SaveIcon from '@mui/icons-material/Save';
 import './navigation.scss';
 import { saveData } from '../functions/saveData';
 import { fetchData } from '../functions/fetchData';
+import { verifyToken } from '../functions/verifyToken';
+import { VERSION } from '../constants/version';
+import { Logout } from '@mui/icons-material';
 
 function Navigation() {
     const pages = ['packs', 'cards', 'settings'];
@@ -36,7 +39,19 @@ function Navigation() {
             if (!user.token) {
                 goToPage('/login');
             } else {
-                setUser(user);
+                verifyToken().then(newUser => {
+                    const data = JSON.parse(newUser.user.cardCollection);
+                    if (data.version && data.version !== VERSION){
+                        localStorage.clear();
+                        goToPage('/login')
+                    } else {
+                        setUser(user);
+                    }
+                }).catch((err) => {
+                    console.log('err', err);
+                    localStorage.clear();
+                    goToPage('/login');
+                })
             }
         } else {
             goToPage('/login');
@@ -53,6 +68,11 @@ function Navigation() {
         setLoading(true);
         await saveData(userId)
         setLoading(false);
+    }
+
+    const logout = () => {
+        localStorage.clear();
+        goToPage('/login');
     }
 
   return (
@@ -80,6 +100,10 @@ function Navigation() {
                     <SettingsIcon fontSize='large'/>
                     <span>Settings</span>
                 </Button> }
+                <Button size='large' onClick={() => logout()} variant='outlined'>
+                    <Logout fontSize='large'/>
+                    <span>Logout</span>
+                </Button>
             </div>
         </div>}
         {isMobile && <BottomNavigation
@@ -98,7 +122,7 @@ function Navigation() {
             <Outlet></Outlet>
             {
                 isMobile && 
-                <Fab color="primary" aria-label="add">
+                <Fab color="primary" aria-label="add" disabled={loading} onClick={() => onSaveData(user.user?.id)}>
                     {!loading && <>
                         <SaveIcon fontSize='large'/>
                     </>}

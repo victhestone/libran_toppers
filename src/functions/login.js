@@ -13,7 +13,6 @@ export const login = async (user) => {
             )
         });
         const receivedUser = await response.json();
-        delete receivedUser.password;
 
         if (receivedUser) {
             localStorage.setItem('libraToppersData', (receivedUser.user.cardCollection));

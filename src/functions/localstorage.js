@@ -40,6 +40,14 @@ export const updateCards = (newCards) => {
     setData(updatedData);
 }
 
+export const updateUser = (alignment) => {
+    const user = localStorage.getItem('libraToppersUser');
+    const parsedUser = JSON.parse(user);
+    const boosterPackIndex = parsedUser.user.boosterPacks.findIndex(pack => pack.id === alignment);
+    parsedUser.user.boosterPacks[boosterPackIndex].amount -= 1;
+    localStorage.setItem('libraToppersUser', JSON.stringify(parsedUser));
+}
+
 const getAllCards = () => {
     const allCards = localStorage.getItem('libraToppersAllCards');
     if (allCards) {

@@ -67,7 +67,7 @@ function CardOverview({ isAllCardsOverview }) {
     }
 
     if (faction !== FACTIONS.All) {
-      filteredCards = filteredCards.filter(card => card.faction === faction);
+      filteredCards = filteredCards.filter(card => { return card.factions.includes(faction); });
     }
 
     setCards(filteredCards);

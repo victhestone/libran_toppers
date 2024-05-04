@@ -5,6 +5,7 @@
     gap: 32px;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 
 
     &-form {
@@ -24,4 +25,9 @@
             width: 100%;
         }
     }
+}
+
+.MuiTabPanel-root {
+    width: calc(100% - 48px);
+    height: calc(100% - 80px);
 }

@@ -1,3 +1,16 @@
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 .card {
     display: flex;
     flex-direction: column;
@@ -75,6 +88,52 @@
         }
     }
 
+    &-standard {
+        border: 2px solid lightsalmon;
+        background-color: #f6d4bc !important;
+
+        
+        .card-text {
+            border: 1px solid lightsalmon;
+
+            &-container {
+                background-color: rgba(lightsalmon, 0.6);
+            }
+        }
+
+        .card-hovered {
+            background-color: salmon !important;
+        }
+
+        .card-img {
+            border: 5px solid lightsalmon;
+        }
+    }
+
+    &-legendary {
+        color: black !important;
+        border: 2px solid midnightblue;
+        background: linear-gradient(0deg, rgba(158,158,158,1) 0%, rgba(255,255,255,1) 100%);
+
+        
+        .card-text {
+            color: white !important;
+            border: 1px solid midnightblue;
+
+            &-container {
+                background-color: rgba(midnightblue, 0.6);
+            }
+        }
+
+        .card-hovered {
+            background-color: silver !important;
+        }
+
+        .card-img {
+            border: 5px solid midnightblue;
+        }
+    }
+
     &-hovered {
         width: 100%;
         height: 100%;
@@ -89,6 +148,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin: 16px;
+            text-align: center;
         }
     }
 
@@ -160,10 +221,6 @@
             margin: 4px;
             padding: 8px;
             height: 82%;
-
-            div {
-                font-size: small;
-            }
         }
     }
 }

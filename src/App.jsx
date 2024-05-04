@@ -10,6 +10,16 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 
 function App() {
+  const [isAdmin, setIsAdmin] = useState(false)
+
+  useEffect(() => {
+    const response = localStorage.getItem('libraToppersUser');
+    if(response) {
+      const user = JSON.parse(response);
+      setIsAdmin(user.user.isAdmin);
+    }
+  }, [])
+
   return (
     <HashRouter>
       <Routes>
@@ -19,7 +29,7 @@ function App() {
         <Route element={<Navigation/>}>
           <Route path="packs" element={<PackOverview />} />
           <Route path="cards" element={<CardOverview />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="settings" element={(isAdmin ? <Settings /> : <Navigate to="/login"/>)} />
         </Route>
       </Routes>
     </HashRouter>
