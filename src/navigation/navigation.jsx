@@ -76,62 +76,64 @@ function Navigation() {
     }
 
   return (
-    <div className={`navigation ${isMobile ? 'mobile' : ''}`}>
-        {!isMobile &&<div className='navigation-tab'>
-            <div className='navigation-tab-top'>
-                {user && <Button disabled={loading} size='large' variant="outlined" onClick={() => onSaveData(user.user?.id)}>
-                    {!loading && <><SaveIcon fontSize='large'/>
-                    <span>Save</span></>}
-                    {loading && <CircularProgress /> }
-                </Button> }
-            </div>
-            <div className='navigation-tab-middle'>
-                <Button size='large' variant={location.pathname.includes('packs') ? 'contained' : 'outlined'} onClick={() => goToPage('packs')}>
-                    <RedeemIcon fontSize='large'/>
-                    <span>Packs</span>
-                </Button>
-                <Button size='large'  variant={location.pathname.includes('cards') ? 'contained' : 'outlined'} onClick={() => goToPage('cards')}>
-                    <StyleIcon fontSize='large'/>
-                    <span>Cards</span>
-                </Button>
-            </div>
-            <div className='navigation-tab-bottom'>
-                { user?.user?.isAdmin && <Button size='large'  variant={location.pathname.includes('settings') ? 'contained' : 'outlined'} onClick={() => goToPage('settings')}>
-                    <SettingsIcon fontSize='large'/>
-                    <span>Settings</span>
-                </Button> }
-                <Button size='large' onClick={() => logout()} variant='outlined'>
-                    <Logout fontSize='large'/>
-                    <span>Logout</span>
-                </Button>
-            </div>
-        </div>}
-        {isMobile && <BottomNavigation
-            className='navigation-bottom'
-            showLabels
-            value={bottomNavValue}
-            onChange={(event, newValue) => {
-                setBottomNavValue(newValue);
-            }}
-            >
-            <BottomNavigationAction label="Packs" icon={<RedeemIcon />} />
-            <BottomNavigationAction label="Cards" icon={<StyleIcon />} />
-            { user?.user?.isAdmin && <BottomNavigationAction label="Settings" icon={<SettingsIcon />} /> }
-        </BottomNavigation>}
-        <div className='navigation-container'>
-            <Outlet></Outlet>
-            {
-                isMobile && 
-                <Fab color="primary" aria-label="add" disabled={loading} onClick={() => onSaveData(user.user?.id)}>
-                    {!loading && <>
-                        <SaveIcon fontSize='large'/>
-                    </>}
-                    {loading && <CircularProgress /> }
-                </Fab>
-            }
+    <>
+        {user ? <div className={`navigation ${isMobile ? 'mobile' : ''}`}>
+            {!isMobile &&<div className='navigation-tab'>
+                <div className='navigation-tab-top'>
+                    {user && <Button disabled={loading} size='large' variant="outlined" onClick={() => onSaveData(user.user?.id)}>
+                        {!loading && <><SaveIcon fontSize='large'/>
+                        <span>Save</span></>}
+                        {loading && <CircularProgress /> }
+                    </Button> }
+                </div>
+                <div className='navigation-tab-middle'>
+                    <Button size='large' variant={location.pathname.includes('packs') ? 'contained' : 'outlined'} onClick={() => goToPage('packs')}>
+                        <RedeemIcon fontSize='large'/>
+                        <span>Packs</span>
+                    </Button>
+                    <Button size='large'  variant={location.pathname.includes('cards') ? 'contained' : 'outlined'} onClick={() => goToPage('cards')}>
+                        <StyleIcon fontSize='large'/>
+                        <span>Cards</span>
+                    </Button>
+                </div>
+                <div className='navigation-tab-bottom'>
+                    { user?.user?.isAdmin && <Button size='large'  variant={location.pathname.includes('settings') ? 'contained' : 'outlined'} onClick={() => goToPage('settings')}>
+                        <SettingsIcon fontSize='large'/>
+                        <span>Settings</span>
+                    </Button> }
+                    <Button size='large' onClick={() => logout()} variant='outlined'>
+                        <Logout fontSize='large'/>
+                        <span>Logout</span>
+                    </Button>
+                </div>
+            </div>}
+            {isMobile && <BottomNavigation
+                className='navigation-bottom'
+                showLabels
+                value={bottomNavValue}
+                onChange={(event, newValue) => {
+                    setBottomNavValue(newValue);
+                }}
+                >
+                <BottomNavigationAction label="Packs" icon={<RedeemIcon />} />
+                <BottomNavigationAction label="Cards" icon={<StyleIcon />} />
+                { user?.user?.isAdmin && <BottomNavigationAction label="Settings" icon={<SettingsIcon />} /> }
+            </BottomNavigation>}
+            <div className='navigation-container'>
+                <Outlet></Outlet>
+                {
+                    isMobile && 
+                    <Fab color="primary" aria-label="add" disabled={loading} onClick={() => onSaveData(user.user?.id)}>
+                        {!loading && <>
+                            <SaveIcon fontSize='large'/>
+                        </>}
+                        {loading && <CircularProgress /> }
+                    </Fab>
+                }
 
-        </div>
-    </div>
+            </div>
+        </div> : <div/>}
+    </>
   );
 }
 

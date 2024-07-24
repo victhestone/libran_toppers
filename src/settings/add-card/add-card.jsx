@@ -144,7 +144,7 @@ export function AddCard() {
                         id="card-faction"
                         label="Faction"
                         onChange={handleChangeFaction}
-                        value={card.factions[0]}
+                        value={card.factions?.length ? card.factions[0] : ''}
                     >
                         {Object.values(FACTIONS).map((faction) => <MenuItem value={faction}>{faction}</MenuItem>)}
                     </Select>

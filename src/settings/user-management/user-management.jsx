@@ -11,7 +11,7 @@ export function UserManagement() {
 
     }
 
-    useEffect(() => { fetchAllUsers().then(users => setUsers(users)) }, []);
+    useEffect(() => { fetchAllUsers().then(users =>{ setUsers(users); console.log('users', users) }) }, []);
 
     return(
         <div style={{width: '100%', height: '100%'}}>
@@ -31,9 +31,8 @@ export function UserManagement() {
                         <td>{user.email}</td>
                         <td>{user.username}</td>
                         <td><Switch onChange={(event) => setAdmin(event.target.checked)} defaultChecked={user.isAdmin} /></td>
-                        <td>{user.boosterPacks}</td>
-                        <td>{user.starterPacks.map(pack=> <span>
-                            {pack}
+                        <td>{user.boosterPacks.map(pack=> <span>
+                            {pack.amount}
                         </span>)}</td>
                     </tr>
                 ))}
